@@ -30,5 +30,5 @@ resource "aws_iam_instance_profile" "default" {
 resource "aws_iam_role_policy" "default_policy" {
     name = "${var.iam_role_default_name}-policy"
     role = "${aws_iam_role.default.name}"
-    policy = "${var.iam_role_policy}
+    policy = "${var.iam_role_policy}"
 }
