@@ -23,7 +23,7 @@ EOF
 # See https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html.
 resource "aws_iam_instance_profile" "default" {
     name = "${var.iam_role_default_name}"
-    roles = ["${aws_iam_role.default.name}"]
+    role = "${aws_iam_role.default.name}"
 }
 
 # See https://www.terraform.io/docs/providers/aws/r/iam_role_policy.html.
